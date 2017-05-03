@@ -19,13 +19,13 @@ using namespace std;
 class VLA{
     
 private:
-    const int m_len;
-    int * m_arr;
-    int * m_p;
+    const int m_len; //数组长度
+    int * m_arr; //数组指针
+    int * m_p; //指向数组第i个元素的指针
 private:
     int * at(int i);//获取第i个元素的指针;
 public:
-    VLA(int len);
+    VLA(int len);  // 构造函数和析构函数
     ~VLA();
 public:
     void input();
@@ -43,13 +43,23 @@ inline VLA::VLA(int len):m_len(len){
     
 }
 
+//析构函数的执行时机
+//析构函数在对象被销毁时调用，而对象的销毁时机与它所在的内存区域有关。不了解内存分区的读者请阅读《C语言和内存》专题。
+//
+//在所有函数之外创建的对象是全局对象，它和全局变量类似，位于内存分区中的全局数据区，程序在结束执行时会调用这些对象的析构函数。
+//
+//在函数内部创建的对象是局部对象，它和局部变量类似，位于栈区，函数执行结束时会调用这些对象的析构函数。
+//
+//new 创建的对象位于堆区，通过 delete 删除时才会调用析构函数；如果没有 delete，析构函数就不会被执行。
 inline VLA::~VLA(){
+    cout << "dealloc" <<endl;
+    
     delete [] m_arr; // 释放内存
 }
 
 inline int * VLA::at(int i){
 
-    if (!m_arr || i <0 || i>=m_len) {
+    if (!m_arr || i <0 || i>= m_len) {
         return NULL;
     }else{
         return m_arr+i;
@@ -57,11 +67,11 @@ inline int * VLA::at(int i){
 }
 inline void VLA::show(){
 
-    for (int i = 0;  (m_p = at(i)); i++) {
+    for (int i = 0; (m_p = at(i)) ; i++) {
         if (i == m_len -1) {
-            cout << *at(i)<<endl;
+            cout << *at(i) <<endl;
         }else{
-            cout << *at(i)<<","<<endl;
+            cout << *at(i) <<","<<endl;
         }
     }
 }
