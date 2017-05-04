@@ -8,6 +8,7 @@
 
 #include <iostream>
 #include "Student.cpp"
+
 int   Student::m_total = 0;
 float Student::m_points = 0.0;
 int main(int argc, const char * argv[]) {
