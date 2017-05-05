@@ -50,13 +50,6 @@ int main(int argc, const char * argv[]) {
     //    *ppp = 666;
     //     ppp  = &n;
     //    ppp 的指向不能改变，ppp 的值不能改了
-    
-    
-    
-    
-    
-    
-    
 
     return 0;
 }
