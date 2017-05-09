@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B649A8BD1EC1F2BE009794F0 /* ObjectClass2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B649A8BB1EC1F2BE009794F0 /* ObjectClass2.cpp */; };
 		FA2D4F5D1EC18EB800411B6D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA2D4F5C1EC18EB800411B6D /* main.cpp */; };
 		FA2D4F651EC18F9C00411B6D /* ObjectClass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA2D4F631EC18F9C00411B6D /* ObjectClass.cpp */; };
 		FA2D4F681EC1943800411B6D /* ObjectClass1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA2D4F661EC1943800411B6D /* ObjectClass1.cpp */; };
@@ -25,6 +26,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B649A8BB1EC1F2BE009794F0 /* ObjectClass2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ObjectClass2.cpp; sourceTree = "<group>"; };
+		B649A8BC1EC1F2BE009794F0 /* ObjectClass2.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ObjectClass2.hpp; sourceTree = "<group>"; };
 		FA2D4F591EC18EB800411B6D /* C++Demo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "C++Demo"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA2D4F5C1EC18EB800411B6D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		FA2D4F631EC18F9C00411B6D /* ObjectClass.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ObjectClass.cpp; sourceTree = "<group>"; };
@@ -68,6 +71,8 @@
 				FA2D4F641EC18F9C00411B6D /* ObjectClass.hpp */,
 				FA2D4F661EC1943800411B6D /* ObjectClass1.cpp */,
 				FA2D4F671EC1943800411B6D /* ObjectClass1.hpp */,
+				B649A8BB1EC1F2BE009794F0 /* ObjectClass2.cpp */,
+				B649A8BC1EC1F2BE009794F0 /* ObjectClass2.hpp */,
 			);
 			path = "C++Demo";
 			sourceTree = "<group>";
@@ -129,6 +134,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B649A8BD1EC1F2BE009794F0 /* ObjectClass2.cpp in Sources */,
 				FA2D4F681EC1943800411B6D /* ObjectClass1.cpp in Sources */,
 				FA2D4F5D1EC18EB800411B6D /* main.cpp in Sources */,
 				FA2D4F651EC18F9C00411B6D /* ObjectClass.cpp in Sources */,
@@ -230,6 +236,7 @@
 		FA2D4F611EC18EB800411B6D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -237,6 +244,7 @@
 		FA2D4F621EC18EB800411B6D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -260,6 +268,7 @@
 				FA2D4F621EC18EB800411B6D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
