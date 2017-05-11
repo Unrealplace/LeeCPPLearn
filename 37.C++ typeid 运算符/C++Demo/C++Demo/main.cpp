@@ -23,7 +23,7 @@ int main(int argc, const char * argv[]) {
     const type_info &nInfo = typeid(n);
     cout<<nInfo.name()<<" | "<<nInfo.hash_code()<<endl;
 //    i | 140735573488988
-
+// test bug hug
     
     //获取一个字面量的类型信息
     const type_info &dInfo = typeid(25.66);
@@ -90,8 +90,6 @@ int main(int argc, const char * argv[]) {
     if (charInfo.operator!=(stuInfo)){
         cout << "not equal"<<endl;
     }
-    
-    
     
 
     return 0;
