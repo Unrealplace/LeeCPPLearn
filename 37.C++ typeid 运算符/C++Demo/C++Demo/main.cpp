@@ -16,6 +16,8 @@ class Base{
 struct STU{
 
 };
+class Derived:public Base{
+};
 
 int main(int argc, const char * argv[]) {
     //获取一个普通变量的类型信息
@@ -90,6 +92,35 @@ int main(int argc, const char * argv[]) {
     if (charInfo.operator!=(stuInfo)){
         cout << "not equal"<<endl;
     }
+    
+    
+    ///////////////判断类型是否相等//////////
+    char * str;
+    int a = 2;
+    int b = 4;
+    float f;
+    
+    if(typeid(str).name() == typeid(f).name()){
+    
+    }else{
+    
+        if (typeid(a) == typeid(b)) {
+            cout << "not equal"<<endl;
+        }
+    }
+    
+    Base obj1;
+    Base * p1;
+    Derived obj2;
+    Derived *p2 = new Derived;
+    p1 = p2;
+    
+    if (typeid(obj) == typeid(obj2)) {
+        cout << "equal "<<endl;
+    }
+    
+    
+    
     
 
     return 0;
