@@ -30,16 +30,15 @@ public:
     friend istream & operator>>(istream & in,complex &A);
     friend ostream & operator<<(ostream & out, complex & A);
     
-    
 };
 
 //重载输入运算符
-istream & operator>>(istream & in, complex & A){
+inline istream & operator>>(istream & in, complex & A){
     in >> A.m_real >> A.m_imag;
     return in;
 }
 //重载输出运算符
-ostream & operator<<(ostream & out, complex & A){
+inline ostream & operator<<(ostream & out, complex & A){
     out << A.m_real <<" + "<< A.m_imag <<" i ";;
     return out;
 }
