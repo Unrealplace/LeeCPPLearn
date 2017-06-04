@@ -31,8 +31,7 @@ int main(int argc, const char * argv[]) {
     }catch(exception &e){  //exception类位于<exception>头文件中
         cout<<"[2]out of bound!"<<endl;
     }
-    
-    
+
     try{
         throw "Unknown Exception";  //抛出异常
         cout<<"This statement will not be executed."<<endl;
